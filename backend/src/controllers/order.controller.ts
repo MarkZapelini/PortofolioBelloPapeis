@@ -1,13 +1,20 @@
 import type { Request, Response } from "express";
 import { orderService } from "../services/order.service.js";
 
+function getParam(value: unknown) {
+  if (Array.isArray(value)) return value[0];
+  if (typeof value === "string") return value;
+  return "";
+}
+
 export const orderController = {
   async list(req: Request, res: Response) {
     return res.json(await orderService.listOrders(req.user!.id, req.user!.role));
   },
 
   async getOne(req: Request, res: Response) {
-    return res.json(await orderService.getOrder(req.user!.id, req.user!.role, req.params.id));
+    const id = getParam((req.params as Record<string, unknown>).id);
+    return res.json(await orderService.getOrder(req.user!.id, req.user!.role, id));
   },
 
   async create(req: Request, res: Response) {
@@ -15,6 +22,7 @@ export const orderController = {
   },
 
   async updateStatus(req: Request, res: Response) {
-    return res.json(await orderService.updateStatus(req.params.id, req.body));
+    const id = getParam((req.params as Record<string, unknown>).id);
+    return res.json(await orderService.updateStatus(id, req.body));
   },
 };

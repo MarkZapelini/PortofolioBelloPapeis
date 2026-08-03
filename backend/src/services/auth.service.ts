@@ -30,10 +30,11 @@ const resetPasswordSchema = z.object({
 });
 
 function signToken(userId: string, role: Role) {
-  return jwt.sign({ role }, env.JWT_SECRET, {
+  const options: jwt.SignOptions = {
     subject: userId,
-    expiresIn: env.JWT_EXPIRES_IN,
-  });
+    expiresIn: env.JWT_EXPIRES_IN as jwt.SignOptions["expiresIn"],
+  };
+  return jwt.sign({ role }, env.JWT_SECRET, options);
 }
 
 function hashResetToken(token: string) {

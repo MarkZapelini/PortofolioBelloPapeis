@@ -1,6 +1,12 @@
 import type { Request, Response } from "express";
 import { catalogService } from "../services/catalog.service.js";
 
+function getParam(value: unknown) {
+  if (Array.isArray(value)) return value[0];
+  if (typeof value === "string") return value;
+  return "";
+}
+
 export const catalogController = {
   async listCategories(_req: Request, res: Response) {
     return res.json(await catalogService.listCategories());
@@ -35,10 +41,12 @@ export const catalogController = {
   },
 
   async updateProduct(req: Request, res: Response) {
-    return res.json(await catalogService.updateProduct(req.params.id, req.body));
+    const id = getParam((req.params as Record<string, unknown>).id);
+    return res.json(await catalogService.updateProduct(id, req.body));
   },
 
   async deleteProduct(req: Request, res: Response) {
-    return res.json(await catalogService.deleteProduct(req.params.id));
+    const id = getParam((req.params as Record<string, unknown>).id);
+    return res.json(await catalogService.deleteProduct(id));
   },
 };
