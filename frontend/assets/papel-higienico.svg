@@ -1,0 +1,15 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="48" fill="#F8F1F4"/>
+  <rect x="70" y="78" width="660" height="644" rx="40" fill="white"/>
+  <rect x="112" y="128" width="576" height="108" rx="24" fill="#1D1718"/>
+  <text x="145" y="182" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Papel Higiênico</text>
+  <text x="145" y="220" fill="#FFDDE7" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Institucional</text>
+  <circle cx="250" cy="466" r="92" fill="#FFF4F6" stroke="#E6D4DA" stroke-width="8"/>
+  <circle cx="250" cy="466" r="28" fill="#F7D2DC"/>
+  <circle cx="400" cy="430" r="92" fill="#FFF4F6" stroke="#E6D4DA" stroke-width="8"/>
+  <circle cx="400" cy="430" r="28" fill="#F7D2DC"/>
+  <circle cx="548" cy="466" r="92" fill="#FFF4F6" stroke="#E6D4DA" stroke-width="8"/>
+  <circle cx="548" cy="466" r="28" fill="#F7D2DC"/>
+  <path d="M200 620H600" stroke="#F0E1E6" stroke-width="22" stroke-linecap="round"/>
+  <path d="M250 660H550" stroke="#F0E1E6" stroke-width="22" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="48" fill="#FAF3F5"/>
+  <rect x="70" y="80" width="660" height="640" rx="40" fill="white"/>
+  <rect x="116" y="128" width="568" height="100" rx="24" fill="#1D1718"/>
+  <text x="150" y="191" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">Bobinas de Papel</text>
+  <ellipse cx="254" cy="484" rx="94" ry="118" fill="#FFF2F5" stroke="#E8D8DE" stroke-width="6"/>
+  <ellipse cx="254" cy="484" rx="26" ry="34" fill="#F7D6DF"/>
+  <ellipse cx="404" cy="456" rx="94" ry="118" fill="#FFF2F5" stroke="#E8D8DE" stroke-width="6"/>
+  <ellipse cx="404" cy="456" rx="26" ry="34" fill="#F7D6DF"/>
+  <ellipse cx="552" cy="484" rx="94" ry="118" fill="#FFF2F5" stroke="#E8D8DE" stroke-width="6"/>
+  <ellipse cx="552" cy="484" rx="26" ry="34" fill="#F7D6DF"/>
+  <path d="M188 642H612" stroke="#F1E3E7" stroke-width="22" stroke-linecap="round"/>
+</svg>

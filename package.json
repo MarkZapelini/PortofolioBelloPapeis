@@ -1,0 +1,16 @@
+{
+  "name": "mayco-papeis-store",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend"
+  ],
+  "scripts": {
+    "dev:frontend": "node -e \"console.log('Frontend estatico: abra frontend/index.html ou publique a pasta frontend.')\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "build:frontend": "node -e \"console.log('Frontend estatico: sem etapa de build.')\"",
+    "build:backend": "npm --prefix backend run build",
+    "build": "npm run build:frontend",
+    "build:all": "npm run build:frontend && npm run build:backend"
+  }
+}

@@ -1,0 +1,210 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  ADMIN
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum CouponType {
+  PERCENTAGE
+  FIXED
+}
+
+model User {
+  id                   String      @id @default(cuid())
+  name                 String
+  email                String      @unique
+  phone                String?
+  companyName          String?
+  passwordHash         String
+  role                 Role        @default(CUSTOMER)
+  isActive             Boolean     @default(true)
+  resetToken           String?
+  resetTokenExpiresAt  DateTime?
+  createdAt            DateTime    @default(now())
+  updatedAt            DateTime    @updatedAt
+  addresses            Address[]
+  reviews              Review[]
+  favorites            Favorite[]
+  orders               Order[]
+  cart                 Cart?
+}
+
+model Address {
+  id          String   @id @default(cuid())
+  label       String
+  zipCode     String
+  street      String
+  number      String
+  complement  String?
+  district    String
+  city        String
+  state       String
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orders      Order[]
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  imageUrl    String?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  products    Product[]
+}
+
+model Product {
+  id             String         @id @default(cuid())
+  name           String
+  slug           String         @unique
+  description    String
+  sku            String         @unique
+  price          Decimal        @db.Decimal(10, 2)
+  compareAtPrice Decimal?       @db.Decimal(10, 2)
+  stock          Int            @default(0)
+  brand          String?
+  unit           String
+  weight         Float          @default(0)
+  isFeatured     Boolean        @default(false)
+  isActive       Boolean        @default(true)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  categoryId     String
+  category       Category       @relation(fields: [categoryId], references: [id])
+  images         ProductImage[]
+  reviews        Review[]
+  favorites      Favorite[]
+  cartItems      CartItem[]
+  orderItems     OrderItem[]
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String?
+  isPrimary Boolean  @default(false)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  rating    Int
+  title     String?
+  comment   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  productId String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  userId    String
+  productId String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+}
+
+model Cart {
+  id         String      @id @default(cuid())
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  userId     String      @unique
+  couponId   String?
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  coupon     Coupon?     @relation(fields: [couponId], references: [id])
+  items      CartItem[]
+}
+
+model CartItem {
+  id        String   @id @default(cuid())
+  quantity  Int
+  cartId    String
+  productId String
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([cartId, productId])
+}
+
+model Coupon {
+  id            String       @id @default(cuid())
+  code          String       @unique
+  type          CouponType
+  value         Decimal      @db.Decimal(10, 2)
+  minOrderValue Decimal?     @db.Decimal(10, 2)
+  expiresAt     DateTime?
+  isActive      Boolean      @default(true)
+  carts         Cart[]
+  orders        Order[]
+}
+
+model Order {
+  id            String        @id @default(cuid())
+  code          String        @unique
+  status        OrderStatus   @default(PENDING)
+  subtotal      Decimal       @db.Decimal(10, 2)
+  discount      Decimal       @db.Decimal(10, 2)
+  shippingCost  Decimal       @db.Decimal(10, 2)
+  total         Decimal       @db.Decimal(10, 2)
+  paymentMethod String
+  paymentStatus PaymentStatus @default(PENDING)
+  notes         String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  userId        String
+  addressId     String
+  couponId      String?
+  user          User          @relation(fields: [userId], references: [id])
+  address       Address       @relation(fields: [addressId], references: [id])
+  coupon        Coupon?       @relation(fields: [couponId], references: [id])
+  items         OrderItem[]
+}
+
+model OrderItem {
+  id          String   @id @default(cuid())
+  quantity    Int
+  unitPrice   Decimal  @db.Decimal(10, 2)
+  totalPrice  Decimal  @db.Decimal(10, 2)
+  orderId     String
+  productId   String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product     Product  @relation(fields: [productId], references: [id])
+}

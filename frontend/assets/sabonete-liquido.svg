@@ -1,0 +1,14 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="48" fill="#FBF5F7"/>
+  <rect x="72" y="82" width="656" height="636" rx="40" fill="white"/>
+  <rect x="116" y="128" width="568" height="100" rx="24" fill="#1D1718"/>
+  <text x="150" y="191" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Sabonete Líquido</text>
+  <path d="M246 334C246 305.281 269.281 282 298 282H356C384.719 282 408 305.281 408 334V556H246V334Z" fill="#FFF2F6" stroke="#E8D9DF" stroke-width="6"/>
+  <path d="M280 246H374V292H280V246Z" fill="#D61F55"/>
+  <path d="M302 218H352V252H302V218Z" fill="#1D1718"/>
+  <path d="M424 372C424 343.281 447.281 320 476 320H534C562.719 320 586 343.281 586 372V556H424V372Z" fill="#FADBE5" stroke="#E8D9DF" stroke-width="6"/>
+  <path d="M458 334H552V368H458V334Z" fill="#1D1718"/>
+  <circle cx="327" cy="430" r="24" fill="#D61F55"/>
+  <circle cx="505" cy="452" r="24" fill="#B91647"/>
+  <path d="M214 638H586" stroke="#F0E1E6" stroke-width="22" stroke-linecap="round"/>
+</svg>

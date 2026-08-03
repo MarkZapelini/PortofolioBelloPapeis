@@ -1,0 +1,16 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="48" fill="#F9F3F5"/>
+  <rect x="70" y="78" width="660" height="644" rx="40" fill="white"/>
+  <rect x="112" y="128" width="576" height="100" rx="24" fill="#1D1718"/>
+  <text x="144" y="190" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">Papel Interfolha</text>
+  <rect x="126" y="280" width="548" height="320" rx="28" fill="#FFF0F4" stroke="#E8D7DD" stroke-width="4"/>
+  <path d="M214 472C214 430.026 248.026 396 290 396H510C551.974 396 586 430.026 586 472V492C586 533.974 551.974 568 510 568H290C248.026 568 214 533.974 214 492V472Z" fill="#D61F55"/>
+  <path d="M264 372L342 294C356 280 378 280 392 294L470 372" stroke="#F4A9BF" stroke-width="22" stroke-linecap="round"/>
+  <path d="M314 344H484" stroke="white" stroke-width="16" stroke-linecap="round"/>
+  <path d="M288 420H512" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <path d="M286 460H514" stroke="#FFE3EC" stroke-width="14" stroke-linecap="round"/>
+  <path d="M286 500H514" stroke="#FFE3EC" stroke-width="14" stroke-linecap="round"/>
+  <rect x="146" y="628" width="160" height="30" rx="15" fill="#F5E7EC"/>
+  <rect x="320" y="628" width="112" height="30" rx="15" fill="#F5E7EC"/>
+  <rect x="446" y="628" width="190" height="30" rx="15" fill="#F5E7EC"/>
+</svg>
