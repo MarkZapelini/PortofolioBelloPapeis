@@ -2,26 +2,52 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="BelloSul papéis: portfólio institucional de papéis descartáveis, sabonete líquido e dispensers para empresas, comércios, clínicas, hotéis e condomínios."
+      content="BelloSul papéis: portfólio institucional premium de papéis descartáveis para empresas, com atendimento comercial, reposição recorrente e apresentação de alto padrão."
     />
     <meta
       name="keywords"
-      content="papel interfolha, papel toalha, papel higiênico institucional, guardanapos, bobinas de papel, sabonete líquido, dispensers"
+      content="papel interfolha, papel toalha, papel higiênico institucional, guardanapos, bobinas de papel, portfólio institucional, descartáveis corporativos"
     />
-    <meta property="og:title" content="BelloSul papéis | Portfólio Institucional" />
+    <meta name="theme-color" content="#100b0d" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="BelloSul papéis | Portfólio Institucional Premium" />
     <meta
       property="og:description"
-      content="Catálogo institucional com entrega ágil, atendimento comercial e reposição recorrente."
+      content="Portfólio institucional com visual high-end, atendimento consultivo e linhas de papel para operações recorrentes."
     />
     <meta property="og:type" content="website" />
-    <title>BelloSul papéis | Portfólio Institucional</title>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="./logo-bellosul.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BelloSul papéis | Portfólio Institucional Premium" />
+    <meta
+      name="twitter:description"
+      content="Linhas institucionais com presença premium, navegação refinada e foco em operações recorrentes."
+    />
+    <link rel="icon" href="./logo-bellosul.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+    <link rel="preload" href="./logo-bellosul.svg" as="image" type="image/svg+xml" />
+    <title>BelloSul papéis | Portfólio Institucional Premium</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <div class="progress-bar" aria-hidden="true">
+      <span data-scroll-progress></span>
+    </div>
+
     <div class="site-shell">
+      <div class="site-shell__backdrop" aria-hidden="true">
+        <div class="site-shell__mesh"></div>
+        <div class="site-shell__aurora"></div>
+        <div class="site-shell__grid"></div>
+        <div class="site-shell__noise"></div>
+        <div class="site-shell__spotlight" data-spotlight></div>
+      </div>
+
       <div class="top-strip">
         <div class="container top-strip__inner">
           <p>(11) 3173-7878</p>
@@ -33,7 +59,7 @@
         </div>
       </div>
 
-      <header class="header">
+      <header class="header" data-header>
         <div class="container header__inner">
           <a class="brand" href="#inicio" aria-label="BelloSul papéis">
             <img class="brand__logo" src="./logo-bellosul.svg" alt="BelloSul papéis" />
@@ -43,75 +69,105 @@
             </span>
           </a>
 
-          <button class="menu-toggle" type="button" aria-label="Abrir menu" data-menu-toggle>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-menu-toggle
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
 
-          <nav class="nav" data-menu>
-            <a href="#inicio">Início</a>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#vantagens">Vantagens</a>
-            <a href="#segmentos">Segmentos</a>
-            <a href="#contato">Contato</a>
+          <nav class="nav" id="site-nav" data-menu aria-label="Navegação principal">
+            <a href="#inicio" data-nav-link>Início</a>
+            <a href="#quem-somos" data-nav-link>Quem Somos</a>
+            <a href="#portfolio" data-nav-link>Portfólio</a>
+            <a href="#vantagens" data-nav-link>Vantagens</a>
+            <a href="#segmentos" data-nav-link>Segmentos</a>
+            <a href="#contato" data-nav-link>Contato</a>
           </nav>
 
-          <a class="button button--ghost header__cta" href="#contato">Solicitar proposta</a>
+          <a class="button button--ghost header__cta" href="#contato" data-magnetic>
+            Solicitar proposta
+          </a>
         </div>
       </header>
 
-      <main>
+      <main id="main-content">
         <section class="hero" id="inicio">
+          <div class="hero__orb hero__orb--primary" aria-hidden="true"></div>
+          <div class="hero__orb hero__orb--secondary" aria-hidden="true"></div>
           <div class="container hero__grid">
-            <div class="hero__copy">
+            <div class="hero__copy" data-reveal="up">
               <span class="eyebrow">Linha institucional e comercial</span>
-              <h1>Papéis descartáveis e itens institucionais para empresas que não podem parar.</h1>
+              <h1>
+                Papéis descartáveis e itens institucionais
+                <span>com presença premium para empresas que não podem parar.</span>
+              </h1>
               <p>
-                Atendimento comercial, portfólio completo e reposição rápida para restaurantes,
+                Atendimento consultivo, portfólio objetivo e reposição ágil para restaurantes,
                 clínicas, condomínios, escritórios, comércios e operações de alto giro.
               </p>
 
-              <div class="hero__actions">
-                <a class="button button--primary" href="#portfolio">Ver portfólio</a>
-                <a class="button button--secondary" href="#contato">Falar com especialista</a>
+              <div class="hero__chips" aria-label="Diferenciais principais">
+                <span>Curadoria institucional</span>
+                <span>Reposição programada</span>
+                <span>Entrega ágil</span>
               </div>
 
-              <div class="hero__metrics">
+              <div class="hero__actions">
+                <a class="button button--primary" href="#portfolio" data-magnetic>Ver portfólio</a>
+                <a class="button button--secondary" href="#contato" data-magnetic>
+                  Falar com especialista
+                </a>
+              </div>
+
+              <div class="hero__metrics" data-reveal="up">
                 <article>
                   <strong>+25 anos</strong>
-                  <span>atendendo operações comerciais</span>
+                  <span>atendendo operações comerciais com leitura rápida de necessidade</span>
                 </article>
                 <article>
                   <strong>Entrega ágil</strong>
-                  <span>reposições programadas para alta demanda</span>
+                  <span>reposições programadas para rotinas que não podem ter ruptura</span>
                 </article>
                 <article>
-                  <strong>8 linhas</strong>
-                  <span>produtos essenciais para operação diária</span>
+                  <strong>5 linhas-chave</strong>
+                  <span>papéis essenciais com apresentação institucional de alto padrão</span>
                 </article>
               </div>
             </div>
 
-            <div class="hero__visual">
-              <div class="hero-card hero-card--image">
+            <div class="hero__visual" data-parallax>
+              <div class="hero-card hero-card--image" data-reveal="right">
+                <div class="hero-card__glow" aria-hidden="true"></div>
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2020-07-18_19_31_27_Fully_stocked_paper_towel_and_bathroom_tissue_shelves_within_the_Giant_supermarket_at_Franklin_Farm_Village_Shopping_Center_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/960px-thumbnail.jpg"
-                  alt="Prateleira com produtos de papel"
+                  alt="Prateleira com produtos institucionais de papel"
+                  fetchpriority="high"
+                  decoding="async"
                 />
+                <div class="hero-card__content">
+                  <span>Curadoria institucional</span>
+                  <strong>Visual premium com foco comercial real</strong>
+                  <p>Uma vitrine pensada para transmitir confiança, padrão e recorrência de compra.</p>
+                </div>
               </div>
 
               <div class="hero__mini-grid">
-                <article class="hero-card hero-card--dark">
+                <article class="hero-card hero-card--dark" data-reveal="up">
                   <span>Oferta corporativa</span>
-                  <strong>Até 18% off</strong>
-                  <p>Combos para interfolha, toalha, guardanapos, bobinas, sabonete e higiênico institucional.</p>
+                  <strong>Combos estratégicos</strong>
+                  <p>Interfolha, toalha, guardanapos, bobinas e higiênico institucional com leitura premium.</p>
                 </article>
-                <article class="hero-card hero-card--light">
+                <article class="hero-card hero-card--light" data-reveal="up">
                   <span>Operação preparada</span>
                   <strong>Estoque seguro</strong>
-                  <p>Reposição planejada e disponibilidade para o próximo pedido.</p>
+                  <p>Reposição planejada com previsibilidade para operações que precisam manter padrão.</p>
                 </article>
               </div>
             </div>
@@ -126,28 +182,27 @@
 
         <section class="intro">
           <div class="container intro__grid">
-            <div>
+            <div data-reveal="up">
               <span class="eyebrow">Conheça nossa linha</span>
-              <h2>Portfólio completo para empresas, comércios, clínicas, hotéis e condomínios.</h2>
+              <h2>Um portfólio comercial pensado para clareza, padrão visual e decisão rápida.</h2>
               <p>
-                A navegação foi reconstruída para funcionar direto em HTML, CSS e JS. Sem fallback,
-                sem camada escondida. O site agora passa a ser uma landing estática completa, pronta
-                para abrir no navegador ou no Live Server.
+                A experiência foi refinada para apresentar as linhas de papel com mais sofisticação,
+                leitura objetiva e uma navegação que transmite confiança desde o primeiro contato.
               </p>
             </div>
 
             <div class="intro__list">
-              <article>
-                <strong>Busca comercial clara</strong>
-                <p>Catálogo organizado por necessidade operacional e tipo de negócio.</p>
+              <article data-reveal="left">
+                <strong>Curadoria comercial clara</strong>
+                <p>Catálogo organizado por necessidade operacional, com foco em leitura rápida e confiança visual.</p>
               </article>
-              <article>
-                <strong>Visual direto</strong>
-                <p>Mais próximo do estilo comercial do site que você mandou como referência.</p>
+              <article data-reveal="left">
+                <strong>Presença premium</strong>
+                <p>Camadas visuais mais refinadas, tipografia mais nobre e componentes com acabamento high-end.</p>
               </article>
-              <article>
-                <strong>Pronto para entrega</strong>
-                <p>Sem dependência de React, Vite ou build para abrir o site.</p>
+              <article data-reveal="left">
+                <strong>Pronto para apresentação</strong>
+                <p>Uma landing enxuta, direta e preparada para transmitir padrão institucional em qualquer tela.</p>
               </article>
             </div>
           </div>
@@ -155,7 +210,7 @@
 
         <section class="about" id="quem-somos">
           <div class="container about__grid">
-            <div class="about__copy">
+            <div class="about__copy" data-reveal="up">
               <span class="eyebrow">Quem Somos</span>
               <h2>Uma operação comercial focada em abastecer empresas com agilidade, padrão e relacionamento próximo.</h2>
               <p>
@@ -170,15 +225,15 @@
             </div>
 
             <div class="about__panel">
-              <article>
+              <article data-reveal="right">
                 <strong>Atendimento consultivo</strong>
                 <p>Apoio comercial para definir volume, frequência de compra e linhas mais adequadas.</p>
               </article>
-              <article>
+              <article data-reveal="right">
                 <strong>Reposição recorrente</strong>
                 <p>Estrutura preparada para manter abastecimento constante e reduzir risco de ruptura.</p>
               </article>
-              <article>
+              <article data-reveal="right">
                 <strong>Parceria de longo prazo</strong>
                 <p>Relacionamento próximo para empresas que precisam de previsibilidade e resposta rápida.</p>
               </article>
@@ -187,15 +242,15 @@
 
           <div class="container">
             <div class="about__metrics">
-              <article>
+              <article data-reveal="up">
                 <strong>+25 anos</strong>
                 <span>de atuação comercial no atendimento institucional</span>
               </article>
-              <article>
-                <strong>8 linhas</strong>
+              <article data-reveal="up">
+                <strong>5 linhas-chave</strong>
                 <span>de produtos para operações com compra recorrente</span>
               </article>
-              <article>
+              <article data-reveal="up">
                 <strong>Atendimento ágil</strong>
                 <span>para cotações, reposição e suporte comercial contínuo</span>
               </article>
@@ -205,16 +260,16 @@
 
         <section class="portfolio" id="portfolio">
           <div class="container">
-            <div class="section-heading">
+            <div class="section-heading" data-reveal="up">
               <span class="eyebrow">Nosso portfólio</span>
               <h2>Linhas institucionais mais procuradas pelos nossos clientes</h2>
               <p>
-                Papel interfolha, toalha, higiênico institucional, guardanapos, bobinas, sabonete
-                líquido e dispensers em uma experiência mais objetiva.
+                Papel interfolha, toalha, higiênico institucional, guardanapos e bobinas em uma
+                experiência mais elegante, clara e comercial.
               </p>
             </div>
 
-            <div class="category-filter" id="category-filter"></div>
+            <div class="category-filter" id="category-filter" data-reveal="up"></div>
             <div class="portfolio__grid" id="portfolio-grid"></div>
           </div>
         </section>
@@ -222,7 +277,7 @@
         <section class="featured">
           <div class="container">
             <div class="featured__panel">
-              <div class="section-heading section-heading--light">
+              <div class="section-heading section-heading--light" data-reveal="up">
                 <span class="eyebrow eyebrow--dark">Linha em destaque</span>
                 <h2>Produtos com maior giro para reposição institucional</h2>
                 <p>
@@ -237,31 +292,31 @@
 
         <section class="benefits" id="vantagens">
           <div class="container">
-            <div class="section-heading">
+            <div class="section-heading" data-reveal="up">
               <span class="eyebrow">Vantagens</span>
-              <h2>Vantagens em comprar com a BelloSul papéis</h2>
+              <h2>Vantagens em contar com a BelloSul papéis</h2>
               <p>
-                O site de referência trabalha bem os diferenciais comerciais. Repliquei isso em uma
-                estrutura limpa, com benefícios claros e leitura rápida.
+                Uma experiência comercial mais nobre, com diferenciais claros, leitura rápida e foco
+                em previsibilidade para quem compra recorrente.
               </p>
             </div>
 
             <div class="benefits__grid">
-              <article>
-                <strong>Atendimento</strong>
+              <article data-reveal="up">
+                <strong>Atendimento consultivo</strong>
                 <p>Equipe comercial pronta para orientar volumes, frequência e linha ideal para sua operação.</p>
               </article>
-              <article>
-                <strong>Qualidade do produto</strong>
-                <p>Linhas selecionadas para desempenho, rendimento e apresentação institucional.</p>
+              <article data-reveal="up">
+                <strong>Qualidade percebida</strong>
+                <p>Linhas selecionadas para desempenho, rendimento e apresentação institucional consistente.</p>
               </article>
-              <article>
+              <article data-reveal="up">
                 <strong>Prazo de entrega</strong>
-                <p>Fluxo pensado para reduzir ruptura e manter o abastecimento em dia.</p>
+                <p>Fluxo pensado para reduzir ruptura e manter o abastecimento em dia com leitura clara de prioridade.</p>
               </article>
-              <article>
-                <strong>Logística</strong>
-                <p>Reposição recorrente e organização comercial para pedidos futuros e grandes volumes.</p>
+              <article data-reveal="up">
+                <strong>Logística recorrente</strong>
+                <p>Reposição planejada e organização comercial para compras futuras e grandes volumes.</p>
               </article>
             </div>
           </div>
@@ -269,45 +324,45 @@
 
         <section class="segments" id="segmentos">
           <div class="container">
-            <div class="section-heading">
+            <div class="section-heading" data-reveal="up">
               <span class="eyebrow">Segmentos</span>
               <h2>Quem compra com a BelloSul papéis</h2>
               <p>Estrutura comercial preparada para diferentes tipos de operação e consumo recorrente.</p>
             </div>
 
             <div class="segments__grid">
-              <article>Restaurantes</article>
-              <article>Hotéis</article>
-              <article>Bares</article>
-              <article>Delivery</article>
-              <article>Clínicas</article>
-              <article>Condomínios</article>
-              <article>Escritórios</article>
-              <article>Comércio em geral</article>
+              <article data-reveal="up">Restaurantes</article>
+              <article data-reveal="up">Hotéis</article>
+              <article data-reveal="up">Bares</article>
+              <article data-reveal="up">Delivery</article>
+              <article data-reveal="up">Clínicas</article>
+              <article data-reveal="up">Condomínios</article>
+              <article data-reveal="up">Escritórios</article>
+              <article data-reveal="up">Comércio em geral</article>
             </div>
           </div>
         </section>
 
         <section class="testimonials">
           <div class="container">
-            <div class="section-heading">
+            <div class="section-heading" data-reveal="up">
               <span class="eyebrow">Prova social</span>
               <h2>Clientes que valorizam entrega, padrão e consistência</h2>
               <p>Depoimentos posicionados para dar o peso comercial que faltava na versão anterior.</p>
             </div>
 
             <div class="testimonials__grid">
-              <article>
-                <p>“Conseguimos concentrar papéis, dispensers e limpeza em um único fornecedor com resposta rápida.”</p>
+              <article data-reveal="up">
+                <p>“Conseguimos concentrar papéis e linhas institucionais em um único fornecedor com resposta rápida.”</p>
                 <strong>Paula Mendes</strong>
                 <span>Rede Café Norte</span>
               </article>
-              <article>
+              <article data-reveal="up">
                 <p>“A estrutura do catálogo facilitou muito compras recorrentes e reposição das unidades.”</p>
                 <strong>Rafael Costa</strong>
                 <span>Clínica Vida Plena</span>
               </article>
-              <article>
+              <article data-reveal="up">
                 <p>“Agora temos uma vitrine mais séria e comercial, alinhada com o tipo de cliente que compra no atacado.”</p>
                 <strong>Mariana Lopes</strong>
                 <span>Condomínio Parque Azul</span>
@@ -318,7 +373,7 @@
 
         <section class="contact" id="contato">
           <div class="container contact__grid">
-            <div class="contact__copy">
+            <div class="contact__copy" data-reveal="up">
               <span class="eyebrow">Contato</span>
               <h2>Solicite uma proposta comercial</h2>
               <p>
@@ -342,7 +397,7 @@
               </div>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" data-reveal="up">
               <label>
                 Nome
                 <input type="text" placeholder="Seu nome" />
@@ -363,7 +418,9 @@
                 Mensagem
                 <textarea placeholder="Fale sobre o volume, frequência e tipo de produto que precisa."></textarea>
               </label>
-              <button class="button button--primary contact-form__button" type="button">Enviar contato</button>
+              <button class="button button--primary contact-form__button" type="button" data-magnetic>
+                Enviar contato
+              </button>
             </form>
           </div>
         </section>
@@ -373,11 +430,11 @@
         <div class="container footer__inner">
           <div>
             <strong>BelloSul papéis</strong>
-            <p>Portfólio institucional de papéis descartáveis e itens de apoio para empresas e operações recorrentes.</p>
+            <p>Portfólio institucional premium de papéis descartáveis para empresas e operações recorrentes.</p>
           </div>
           <div>
             <strong>Linhas principais</strong>
-            <p>Interfolha, toalha, higiênico institucional, guardanapos, bobinas, sabonete e dispensers.</p>
+            <p>Interfolha, toalha, higiênico institucional, guardanapos e bobinas.</p>
           </div>
           <div>
             <strong>Contato</strong>
@@ -386,6 +443,29 @@
         </div>
       </footer>
     </div>
+
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/551131737878?text=Olá!%20Gostaria%20de%20solicitar%20uma%20proposta%20comercial."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+      data-magnetic
+    >
+      <span class="whatsapp-button__icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32" role="img" focusable="false">
+          <path
+            d="M16 3C8.832 3 3 8.722 3 15.757c0 2.249.604 4.445 1.752 6.376L3 29l7.109-1.846a13.11 13.11 0 0 0 5.891 1.392C23.168 28.546 29 22.824 29 15.79 29 8.722 23.168 3 16 3Zm0 23.343a10.9 10.9 0 0 1-5.563-1.52l-.397-.234-4.217 1.095 1.129-4.079-.259-.417a10.56 10.56 0 0 1-1.629-5.43c0-5.83 4.852-10.572 10.936-10.572 6.051 0 10.937 4.742 10.937 10.605 0 5.829-4.886 10.552-10.937 10.552Zm6.203-7.948c-.339-.166-2.002-.975-2.313-1.086-.311-.111-.538-.166-.764.166-.227.332-.877 1.086-1.075 1.309-.198.222-.396.249-.735.083-.339-.166-1.431-.521-2.726-1.661-1.007-.888-1.688-1.983-1.886-2.315-.198-.332-.021-.512.149-.678.152-.148.339-.388.509-.582.17-.194.226-.332.339-.554.113-.222.057-.416-.028-.582-.085-.166-.764-1.83-1.047-2.506-.276-.661-.557-.571-.764-.581l-.651-.011c-.226 0-.594.083-.905.416-.311.332-1.188 1.14-1.188 2.779 0 1.64 1.216 3.224 1.386 3.445.17.222 2.393 3.614 5.8 5.066.81.345 1.442.551 1.935.705.813.258 1.553.221 2.138.134.652-.097 2.002-.817 2.285-1.606.283-.789.283-1.465.198-1.606-.085-.138-.311-.221-.651-.388Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <span class="whatsapp-button__label">WhatsApp</span>
+    </a>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>
+      <span>Topo</span>
+    </button>
 
     <script src="./script.js"></script>
   </body>

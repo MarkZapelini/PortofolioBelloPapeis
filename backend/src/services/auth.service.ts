@@ -75,6 +75,7 @@ export const authService = {
     const data = loginSchema.parse(payload);
     const user = await prisma.user.findUnique({ where: { email: data.email } });
     if (!user) throw new AppError("Credenciais inválidas.", 401);
+    if (!user.isActive) throw new AppError("Usuário inativo.", 403);
 
     const matches = await bcrypt.compare(data.password, user.passwordHash);
     if (!matches) throw new AppError("Credenciais inválidas.", 401);

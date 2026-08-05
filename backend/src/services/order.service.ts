@@ -1,4 +1,5 @@
 import { OrderStatus } from "@prisma/client";
+import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { prisma } from "../lib/prisma.js";
 import { calculateDiscount, calculateShipping } from "../utils/cart.js";
@@ -79,6 +80,8 @@ export const orderService = {
     const shippingCost = calculateShipping(cart.items);
     const total = subtotal - discount + shippingCost;
 
+    const orderCode = `PED-${randomUUID().replace(/-/g, "").slice(0, 12).toUpperCase()}`;
+
     const order = await prisma.$transaction(async (tx) => {
       for (const item of cart.items) {
         if (item.product.stock < item.quantity) {
@@ -88,7 +91,7 @@ export const orderService = {
 
       const createdOrder = await tx.order.create({
         data: {
-          code: `PED-${Date.now()}`,
+          code: orderCode,
           paymentMethod: data.paymentMethod,
           notes: data.notes,
           subtotal,

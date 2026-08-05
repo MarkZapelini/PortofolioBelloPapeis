@@ -44,21 +44,31 @@ export const accountService = {
 
   async updateAddress(userId: string, addressId: string, payload: unknown) {
     const data = addressSchema.partial().parse(payload);
+    const address = await prisma.address.findFirst({
+      where: { id: addressId, userId },
+    });
+    if (!address) throw new AppError("Endereço não encontrado.", 404);
+
     if (data.isDefault) {
       await prisma.address.updateMany({
         where: { userId },
         data: { isDefault: false },
       });
     }
-    return prisma.address.updateMany({
-      where: { id: addressId, userId },
+    return prisma.address.update({
+      where: { id: addressId },
       data,
     });
   },
 
   async deleteAddress(userId: string, addressId: string) {
-    await prisma.address.deleteMany({
+    const address = await prisma.address.findFirst({
       where: { id: addressId, userId },
+    });
+    if (!address) throw new AppError("Endereço não encontrado.", 404);
+
+    await prisma.address.delete({
+      where: { id: addressId },
     });
     return { message: "Endereço removido com sucesso." };
   },
@@ -76,6 +86,12 @@ export const accountService = {
   },
 
   async toggleFavorite(userId: string, productId: string) {
+    const product = await prisma.product.findFirst({
+      where: { id: productId, isActive: true },
+      select: { id: true },
+    });
+    if (!product) throw new AppError("Produto não encontrado.", 404);
+
     const existing = await prisma.favorite.findFirst({
       where: { userId, productId },
     });
@@ -115,6 +131,18 @@ export const accountService = {
 
   async createReview(userId: string, payload: unknown) {
     const data = reviewSchema.parse(payload);
+    const product = await prisma.product.findFirst({
+      where: { id: data.productId, isActive: true },
+      select: { id: true },
+    });
+    if (!product) throw new AppError("Produto não encontrado.", 404);
+
+    const existingReview = await prisma.review.findFirst({
+      where: { userId, productId: data.productId },
+      select: { id: true },
+    });
+    if (existingReview) throw new AppError("Você já avaliou este produto.", 409);
+
     return prisma.review.create({
       data: { ...data, userId },
     });
