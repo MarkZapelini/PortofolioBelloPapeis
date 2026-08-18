@@ -5,7 +5,7 @@ const bannerData = [
       "Maciez, absorção e qualidade para o seu dia a dia. 100% celulose virgem, 1000 folhas, alta performance para empresas e residências.",
     cta: "Solicitar orçamento",
     href: "#contato",
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.17.jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.17.jpeg",
   },
   {
     title: "Papel Higiênico Bello Big Branco",
@@ -13,7 +13,7 @@ const bannerData = [
       "Rolão de 300 metros por rolo, alto rendimento, resistência e absorção para banheiros de grande circulação.",
     cta: "Ver mais",
     href: "#portfolio",
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.18.jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.18.jpeg",
   },
   {
     title: "Bobina de Toalha Premium",
@@ -21,7 +21,7 @@ const bannerData = [
       "Qualidade premium, sustentável, econômica, 100% celulose virgem. A melhor escolha para uma operação ágil e sem parar.",
     cta: "Falar com Maico Daniel",
     href: "#contato",
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.19.jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.19.jpeg",
   },
 ];
 
@@ -35,7 +35,7 @@ const categories = [
     unit: "por embalagem",
     badges: ["1000 folhas", "Alta absorção"],
     highlights: ["Restaurantes", "Cozinhas", "Empresas"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.17 (1).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.17 (1).jpeg",
   },
   {
     name: "Papel Toalha Interfolhado Vermelho",
@@ -46,7 +46,7 @@ const categories = [
     unit: "por caixa",
     badges: ["Folhas macias", "Resistente"],
     highlights: ["Escritórios", "Clínicas", "Alto giro"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.17 (2).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.17 (2).jpeg",
   },
   {
     name: "Papel Higiênico Bello Big Vermelho",
@@ -57,7 +57,7 @@ const categories = [
     unit: "por pacote",
     badges: ["8 rolos", "300m cada"],
     highlights: ["Condomínios", "Empresas", "Alta demanda"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.18 (1).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.18 (1).jpeg",
   },
   {
     name: "Papel Interfolha Cód. 178",
@@ -68,7 +68,7 @@ const categories = [
     unit: "por fardo",
     badges: ["100% Celulose", "Tamanho ideal"],
     highlights: ["Banheiro social", "Clínicas", "Hotelaria"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.17 (4).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.17 (4).jpeg",
   },
   {
     name: "Toalha Interfolhada 2 Dobras Caixa",
@@ -79,7 +79,7 @@ const categories = [
     unit: "por caixa",
     badges: ["2 dobras", "4800 folhas"],
     highlights: ["Clínicas", "Escritórios", "Grande circulação"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.17 (3).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.17 (3).jpeg",
   },
   {
     name: "Rolão Institucional Azul",
@@ -90,7 +90,7 @@ const categories = [
     unit: "por pacote",
     badges: ["200m/300m", "Higiênico"],
     highlights: ["Hospitais", "Escolas", "Clínicas"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.18 (2).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.18 (2).jpeg",
   },
   {
     name: "Papel Toalha Bobina 100% Celulose",
@@ -101,7 +101,7 @@ const categories = [
     unit: "por embalagem",
     badges: ["200m/rolo", "Alta resistência"],
     highlights: ["Food service", "Alto giro"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.18 (4).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.18 (4).jpeg",
   },
   {
     name: "Rolão Institucional Vermelho",
@@ -112,7 +112,7 @@ const categories = [
     unit: "por pacote",
     badges: ["Institucional", "Branco"],
     highlights: ["Indústrias", "Restaurantes", "Escolas"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.18 (3).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.18 (3).jpeg",
   },
   {
     name: "Papel Higiênico Cai-Cai Gold",
@@ -123,7 +123,7 @@ const categories = [
     unit: "por caixa",
     badges: ["6000 folhas", "Linha Gold"],
     highlights: ["Alto fluxo", "Economia"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.19 (1).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.19 (1).jpeg",
   },
   {
     name: "Lençol Hospitalar",
@@ -134,7 +134,7 @@ const categories = [
     unit: "por caixa",
     badges: ["Higiênico", "Descartável"],
     highlights: ["Hospitais", "Estética", "Laboratórios"],
-    image: "../IMG/WhatsApp Image 2026-08-10 at 15.30.19 (2).jpeg",
+    image: "./IMG/WhatsApp Image 2026-08-10 at 15.30.19 (2).jpeg",
   },
 ];
 
